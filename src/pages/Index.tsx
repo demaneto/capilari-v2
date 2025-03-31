@@ -6,6 +6,7 @@ import VideoSection from "@/components/VideoSection";
 import Technologies from "@/components/Technologies";
 import Differentials from "@/components/Differentials";
 import Testimonials from "@/components/Testimonials";
+import ResultsSection from "@/components/ResultsSection";
 import AboutDoctor from "@/components/AboutDoctor";
 import TechniqueProcess from "@/components/TechniqueProcess";
 import AboutInstitute from "@/components/AboutInstitute";
@@ -20,6 +21,7 @@ const Index = () => {
       <VideoSection />
       <Technologies />
       <Differentials />
+      <ResultsSection />
       <Testimonials />
       <AboutDoctor />
       <TechniqueProcess />
