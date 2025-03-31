@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 270 37% 26%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -96,6 +99,31 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-nunito;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.gradient-overlay {
+  background: linear-gradient(rgba(65, 42, 91, 0.6), rgba(65, 42, 91, 0.3));
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-6 text-center font-playfair relative;
+}
+
+.section-title::after {
+  content: "";
+  @apply block w-24 h-1 bg-gold mx-auto mt-4;
+}
+
+.heading-accent {
+  @apply text-primary;
 }
