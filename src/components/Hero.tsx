@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-cover bg-top z-0"
         style={{
           backgroundImage: 
-            "linear-gradient(rgba(65, 42, 91, 0.7), rgba(65, 42, 91, 0.6)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=3270&auto=format&fit=crop')",
+            "linear-gradient(rgba(65, 42, 91, 0.7), rgba(65, 42, 91, 0.6)), url('/lovable-uploads/51d7efc8-6b5d-4d2d-904d-95b2da565ad3.png')",
         }}
       ></div>
       
