@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MenuIcon, X } from "lucide-react";
+import { getWhatsAppUrl } from "@/utils/whatsapp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,51 +22,51 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center">
-          <img
-            src="/images/logo/LogoCapilariHorizontal.png"
-            alt="Instituto Capilari"
-            className="h-16 w-auto"
-            width={200}
-            height={50}
-            loading="eager"
-          />
-        </div>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          <a href="/" className="flex items-center">
+            <img
+              src="/images/logo/LogoCapilariHorizontal.png"
+              alt="Instituto Capilari"
+              className="h-16 w-auto"
+              loading="eager"
+            />
+          </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex space-x-6">
-            {["Vídeo", "Resultados", "Sobre", "Depoimentos", "Diferenciais", "Contato"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className={`font-medium text-${
-                    isScrolled ? "primary" : "white"
-                  } hover:text-gold-light transition-colors`}
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <Button 
-            variant="default" 
-            className="bg-primary hover:bg-primary-light text-white"
-            onClick={() => window.open('https://wa.me/5541988319759', '_blank')}
-          >
-            Agende sua Consulta
-          </Button>
-        </nav>
-        
-        {/* Mobile Menu Button */}
-        <button className="md:hidden text-primary" onClick={toggleMobileMenu}>
-          {mobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
-        </button>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <ul className="flex space-x-6">
+              {["Vídeo", "Resultados", "Sobre", "Depoimentos", "Diferenciais", "Contato"].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className={`font-medium text-${
+                      isScrolled ? "primary" : "white"
+                    } hover:text-gold-light transition-colors`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Button 
+              variant="default" 
+              className="bg-primary hover:bg-primary-light text-white"
+              onClick={() => window.open(getWhatsAppUrl(), '_blank')}
+            >
+              Agende sua Consulta
+            </Button>
+          </nav>
+          
+          {/* Mobile Menu Button */}
+          <button className="md:hidden text-primary" onClick={toggleMobileMenu}>
+            {mobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
+          </button>
+        </div>
       </div>
       
       {/* Mobile Menu */}
@@ -88,7 +89,7 @@ const Header = () => {
                 variant="default" 
                 className="bg-primary hover:bg-primary-light text-white w-full"
                 onClick={() => {
-                  window.open('https://wa.me/5541988319759', '_blank');
+                  window.open(getWhatsAppUrl(), '_blank');
                   setMobileMenuOpen(false);
                 }}
               >

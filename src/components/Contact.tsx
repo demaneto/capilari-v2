@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { getWhatsAppUrl } from "@/utils/whatsapp";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -95,8 +96,8 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-primary text-lg mb-1">WhatsApp</h3>
                   <p className="text-gray-600 text-lg">
-                    <a href="https://wa.me/5541988319759" className="hover:text-primary">
-                      (41) 98831-9759
+                    <a href={getWhatsAppUrl()} className="hover:text-primary">
+                      Fale Conosco no WhatsApp
                     </a>
                   </p>
                 </div>

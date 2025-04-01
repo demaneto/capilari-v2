@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/utils/whatsapp";
 import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
@@ -58,7 +59,7 @@ const Hero = () => {
           </p>
           <Button
             className="bg-gold hover:bg-gold-light text-primary rounded-md px-8 py-6 text-lg transition-all transform hover:scale-105"
-            onClick={() => window.open('https://wa.me/5541988319759', '_blank')}
+            onClick={() => window.open(getWhatsAppUrl(), '_blank')}
           >
             Agende sua Consulta
           </Button>
