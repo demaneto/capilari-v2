@@ -1,10 +1,10 @@
-
 import React, { useState } from "react";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const videoId = "Vdc2VBD7jp4";
 
   const handlePlayVideo = () => {
     setIsPlaying(true);
@@ -17,16 +17,17 @@ const VideoSection = () => {
         <p className="text-center mb-8 max-w-2xl mx-auto text-gray-700">
           Acompanhe as etapas do transplante capilar até o resultado final
         </p>
-        <div className="relative max-w-md mx-auto rounded-lg overflow-hidden shadow-xl">
+        <div className="relative max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-xl">
           {isPlaying ? (
-            <video
-              className="w-full aspect-[9/16] object-cover"
-              controls
-              autoPlay
-              src="/caminho-para-seu-video.mp4"
-            >
-              Seu navegador não suporta vídeos.
-            </video>
+            <div className="relative w-full aspect-[9/16]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+                title="Vídeo do procedimento"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           ) : (
             <div className="relative">
               <div className="w-full aspect-[9/16] bg-primary/20 relative">
@@ -52,7 +53,7 @@ const VideoSection = () => {
         </div>
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-500">
-            * Toque para reproduzir o vídeo e acompanhar a transformação
+            * Clique para reproduzir o vídeo e acompanhar a transformação
           </p>
         </div>
       </div>

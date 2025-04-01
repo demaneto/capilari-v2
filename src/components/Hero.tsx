@@ -1,17 +1,48 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{
-          backgroundImage: 
-            "linear-gradient(rgba(65, 42, 91, 0.7), rgba(65, 42, 91, 0.6)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=3270&auto=format&fit=crop')",
-        }}
-      ></div>
+      <div className="absolute inset-0 z-0">
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcSet="/images/hero/hero-desktop.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="/images/hero/hero-tablet.webp"
+            type="image/webp"
+          />
+          <source
+            srcSet="/images/hero/hero-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcSet="/images/hero/hero-desktop.jpg"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="/images/hero/hero-tablet.jpg"
+            type="image/jpeg"
+          />
+          <img
+            src="/images/hero/hero-mobile.jpg"
+            alt="Hero background"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            loading="eager"
+            decoding="sync"
+          />
+        </picture>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60"></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
         <div className="max-w-3xl mx-auto md:mx-0">

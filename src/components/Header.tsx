@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MenuIcon, X } from "lucide-react";
@@ -9,11 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,14 +22,19 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className={`text-${isScrolled ? "primary" : "white"} font-playfair font-bold text-xl md:text-2xl`}>
-            Instituto Capilari
-          </h1>
+          <img
+            src="/images/logo/LogoCapilariHorizontal.png"
+            alt="Instituto Capilari"
+            className="h-12 w-auto"
+            width={200}
+            height={50}
+            loading="eager"
+          />
         </div>
 
         {/* Desktop Navigation */}

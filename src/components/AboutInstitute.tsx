@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const AboutInstitute = () => {
@@ -12,11 +11,39 @@ const AboutInstitute = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="relative aspect-video overflow-hidden rounded-lg shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070&auto=format&fit=crop"
-                alt="Instituto Capilari"
-                className="w-full h-full object-cover"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcSet="/images/institute/institute-desktop.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcSet="/images/institute/institute-tablet.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcSet="/images/institute/institute-mobile.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1024px)"
+                  srcSet="/images/institute/institute-desktop.jpg"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcSet="/images/institute/institute-tablet.jpg"
+                  type="image/jpeg"
+                />
+                <img
+                  src="/images/institute/institute-mobile.jpg"
+                  alt="Instituto Capilari"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
               

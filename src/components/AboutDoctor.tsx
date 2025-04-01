@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -45,11 +44,39 @@ const AboutDoctor = () => {
             <div className="relative">
               <div className="absolute -top-5 -left-5 w-32 h-32 bg-gold-light rounded-full opacity-50"></div>
               <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?q=80&w=1974&auto=format&fit=crop"
-                  alt="Dra. Flávia Basílio"
-                  className="w-full h-auto object-cover"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcSet="/images/doctor/doctor-desktop.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet="/images/doctor/doctor-tablet.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet="/images/doctor/doctor-mobile.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1024px)"
+                    srcSet="/images/doctor/doctor-desktop.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet="/images/doctor/doctor-tablet.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="/images/doctor/doctor-mobile.jpg"
+                    alt="Dra. Flávia Basílio"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <div className="absolute -bottom-5 -right-5 w-32 h-32 bg-primary/20 rounded-full"></div>
             </div>

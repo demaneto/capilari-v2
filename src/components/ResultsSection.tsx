@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Carousel,
@@ -12,33 +11,31 @@ import { Card, CardContent } from "@/components/ui/card";
 const cases = [
   {
     id: 1,
-    title: "Caso 1",
-    description: "Transplante com 3000 folículos",
-    image: "/images/resultado-1.jpg", // Substitua pelo caminho real da imagem
+    image: "/images/results/result-1-desktop.webp",
   },
   {
-    id: 2,
-    title: "Caso 2",
-    description: "Tratamento de calvície avançada",
-    image: "/images/resultado-2.jpg", // Substitua pelo caminho real da imagem
+    id: 7,
+    image: "/images/results/result-7-desktop.webp",
   },
   {
-    id: 3,
-    title: "Caso 3",
-    description: "Restauração de linha frontal",
-    image: "/images/resultado-3.jpg", // Substitua pelo caminho real da imagem
-  },
-  {
-    id: 4,
-    title: "Caso 4",
-    description: "Tratamento para densidade capilar",
-    image: "/images/resultado-4.jpg", // Substitua pelo caminho real da imagem
+    id: 6,
+    image: "/images/results/result-6-desktop.webp",
   },
   {
     id: 5,
-    title: "Caso 5",
-    description: "Técnica FUE avançada",
-    image: "/images/resultado-5.jpg", // Substitua pelo caminho real da imagem
+    image: "/images/results/result-5-desktop.webp",
+  },
+  {
+    id: 4,
+    image: "/images/results/result-4-desktop.webp",
+  },
+  {
+    id: 3,
+    image: "/images/results/result-3-desktop.webp",
+  },
+  {
+    id: 2,
+    image: "/images/results/result-2-desktop.webp",
   },
 ];
 
@@ -69,15 +66,39 @@ const ResultsSection = () => {
                     <Card className="border-0 overflow-hidden shadow-md">
                       <CardContent className="p-0">
                         <div className="relative">
-                          <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className="w-full aspect-[4/3] object-cover" 
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                            <h3 className="font-bold text-lg">{item.title}</h3>
-                            <p className="text-white/90 text-sm">{item.description}</p>
-                          </div>
+                          <picture>
+                            <source
+                              media="(min-width: 1024px)"
+                              srcSet={item.image.replace('desktop', 'desktop')}
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 768px)"
+                              srcSet={item.image.replace('desktop', 'tablet')}
+                              type="image/webp"
+                            />
+                            <source
+                              srcSet={item.image.replace('desktop', 'mobile')}
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 1024px)"
+                              srcSet={item.image.replace('desktop', 'desktop').replace('.webp', '.jpg')}
+                              type="image/jpeg"
+                            />
+                            <source
+                              media="(min-width: 768px)"
+                              srcSet={item.image.replace('desktop', 'tablet').replace('.webp', '.jpg')}
+                              type="image/jpeg"
+                            />
+                            <img
+                              src={item.image.replace('desktop', 'mobile').replace('.webp', '.jpg')}
+                              alt="Resultado do procedimento"
+                              className="w-full aspect-[4/3] object-cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </picture>
                         </div>
                       </CardContent>
                     </Card>
@@ -107,15 +128,39 @@ const ResultsSection = () => {
                     <Card className="border-0 overflow-hidden shadow-md">
                       <CardContent className="p-0">
                         <div className="relative">
-                          <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className="w-full aspect-[4/3] object-cover" 
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                            <h3 className="font-bold text-lg">{item.title}</h3>
-                            <p className="text-white/90 text-sm">{item.description}</p>
-                          </div>
+                          <picture>
+                            <source
+                              media="(min-width: 1024px)"
+                              srcSet={item.image.replace('desktop', 'desktop')}
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 768px)"
+                              srcSet={item.image.replace('desktop', 'tablet')}
+                              type="image/webp"
+                            />
+                            <source
+                              srcSet={item.image.replace('desktop', 'mobile')}
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 1024px)"
+                              srcSet={item.image.replace('desktop', 'desktop').replace('.webp', '.jpg')}
+                              type="image/jpeg"
+                            />
+                            <source
+                              media="(min-width: 768px)"
+                              srcSet={item.image.replace('desktop', 'tablet').replace('.webp', '.jpg')}
+                              type="image/jpeg"
+                            />
+                            <img
+                              src={item.image.replace('desktop', 'mobile').replace('.webp', '.jpg')}
+                              alt="Resultado do procedimento"
+                              className="w-full aspect-[4/3] object-cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </picture>
                         </div>
                       </CardContent>
                     </Card>
