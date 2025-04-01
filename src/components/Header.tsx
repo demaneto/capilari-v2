@@ -30,7 +30,7 @@ const Header = () => {
           <img
             src="/images/logo/LogoCapilariHorizontal.png"
             alt="Instituto Capilari"
-            className="h-12 w-auto"
+            className="h-16 w-auto"
             width={200}
             height={50}
             loading="eager"
@@ -40,7 +40,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">
-            {["Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
+            {["Vídeo", "Resultados", "Sobre", "Depoimentos", "Diferenciais", "Contato"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -56,7 +56,7 @@ const Header = () => {
           <Button 
             variant="default" 
             className="bg-primary hover:bg-primary-light text-white"
-            onClick={() => window.location.href = "#contato"}
+            onClick={() => window.open('https://wa.me/5541988319759', '_blank')}
           >
             Agende sua Consulta
           </Button>
@@ -72,7 +72,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white w-full shadow-lg py-4">
           <ul className="flex flex-col space-y-4 px-6">
-            {["Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
+            {["Vídeo", "Resultados", "Sobre", "Depoimentos", "Diferenciais", "Contato"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -88,7 +88,7 @@ const Header = () => {
                 variant="default" 
                 className="bg-primary hover:bg-primary-light text-white w-full"
                 onClick={() => {
-                  window.location.href = "#contato";
+                  window.open('https://wa.me/5541988319759', '_blank');
                   setMobileMenuOpen(false);
                 }}
               >

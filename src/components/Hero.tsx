@@ -50,7 +50,7 @@ const Hero = () => {
             Dra. Flávia Basilio
           </h1>
           <h2 className="text-xl md:text-2xl text-white mb-6">
-            Dermatologista dedicada ao Transplante Capilar em Curitiba
+            Dermatologista especialista em Transplante Capilar em Curitiba
           </h2>
           <p className="text-white text-lg md:text-xl mb-8 max-w-2xl">
             Técnicas avançadas para resultados naturais e densidade capilar
@@ -58,7 +58,7 @@ const Hero = () => {
           </p>
           <Button
             className="bg-gold hover:bg-gold-light text-primary rounded-md px-8 py-6 text-lg transition-all transform hover:scale-105"
-            onClick={() => window.location.href = "#contato"}
+            onClick={() => window.open('https://wa.me/5541988319759', '_blank')}
           >
             Agende sua Consulta
           </Button>

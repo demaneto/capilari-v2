@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,12 +22,12 @@ const Contact = () => {
         <h2 className="section-title">
           <span className="heading-accent">Entre em Contato</span>
         </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
           Estamos à disposição para esclarecer suas dúvidas e agendar sua consulta de avaliação.
         </p>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
+          <div className="lg:col-span-2">
             <Card className="border-0 shadow-md overflow-hidden">
               <CardContent className="p-0">
                 <iframe
@@ -69,7 +68,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-primary text-lg mb-1">Endereço</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-lg">
                     Rua Frederico Cantarelli, 484<br />
                     Bigorrilho, Curitiba - PR, 80710-240
                   </p>
@@ -95,7 +94,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-primary text-lg mb-1">WhatsApp</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-lg">
                     <a href="https://wa.me/5541988319759" className="hover:text-primary">
                       (41) 98831-9759
                     </a>
@@ -122,7 +121,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-primary text-lg mb-1">Redes Sociais</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-lg">
                     <a 
                       href="https://www.instagram.com/draflaviabasilio/" 
                       className="hover:text-primary"
@@ -135,57 +134,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div>
-            <Card className="border-0 shadow-md">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-primary mb-6">Agende sua Consulta</h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Nome
-                      </label>
-                      <Input id="name" placeholder="Seu nome completo" required />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Telefone
-                      </label>
-                      <Input id="phone" placeholder="(00) 00000-0000" required />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email
-                    </label>
-                    <Input id="email" type="email" placeholder="seu@email.com" required />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Mensagem
-                    </label>
-                    <Textarea
-                      id="message"
-                      placeholder="Como podemos ajudar? Descreva sua necessidade ou dúvida."
-                      rows={4}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="pt-3">
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary-light text-white">
-                      Enviar Mensagem
-                    </Button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

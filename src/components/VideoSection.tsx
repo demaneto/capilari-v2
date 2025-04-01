@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -22,7 +22,7 @@ const VideoSection = () => {
             <div className="relative w-full aspect-[9/16]">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
                 title="Vídeo do procedimento"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

@@ -12,30 +12,24 @@ const AboutDoctor = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
             <h3 className="text-3xl font-bold text-primary mb-6 font-playfair">Dra. Flávia Basílio</h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Médica dermatologista com especialização em alopecias e transplante capilar. Com residência, mestrado e doutorado pela UFPR, atuou como professora de dermatologia na instituição.
-            </p>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Possui formação internacional em cirurgia capilar pela Sociedade Italiana de Tricologia, além de especializações complementares pela Universidade de Miami e participação ativa em sociedades científicas nacionais e internacionais.
-            </p>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              Cofundadora e atualmente Diretora Técnica do Instituto Capilari, dedicando-se ao tratamento e à restauração capilar com técnicas modernas e resultados naturais.
-            </p>
+            <div className="space-y-4 text-gray-600 text-lg">
+              <p>
+                Médica dermatologista com especialização em alopecias e transplante capilar. Com residência, mestrado e doutorado pela UFPR, atuou como professora de dermatologia na instituição.
+              </p>
+              <p>
+                Possui formação internacional em cirurgia capilar pela Sociedade Italiana de Tricologia, além de especializações complementares pela Universidade de Miami e participação ativa em sociedades científicas nacionais e internacionais. Membro da ABCRC (Associação Brasileira de Cirurgia de Restauração capilar) e da ISHRS (International Society of Hair Restorartion Surgery).
+              </p>
+              <p>
+                Cofundadora e atualmente Diretora Técnica do Instituto Capilari, dedicando-se ao tratamento e à restauração capilar com técnicas modernas e resultados naturais.
+              </p>
+            </div>
             
             <div className="flex space-x-4">
               <Button
                 className="bg-primary hover:bg-primary-light text-white"
-                onClick={() => window.location.href = "#contato"}
+                onClick={() => window.open('https://wa.me/5541988319759', '_blank')}
               >
                 Agende sua consulta conosco
-              </Button>
-              
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-                onClick={() => window.location.href = "#contato"}
-              >
-                Ver horários disponíveis
               </Button>
             </div>
           </div>

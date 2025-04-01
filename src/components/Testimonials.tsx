@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -101,22 +100,20 @@ const Testimonials = () => {
           </div>
           
           <div className="flex justify-center mt-8 space-x-4">
-            <Button 
-              onClick={prevTestimonial} 
-              variant="outline" 
-              className="border-white text-white hover:bg-white/10"
-              size="sm"
+            <button
+              onClick={prevTestimonial}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary p-2 rounded-full shadow-lg transition-all"
+              aria-label="Anterior"
             >
-              Anterior
-            </Button>
-            <Button 
-              onClick={nextTestimonial} 
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
-              size="sm"
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary p-2 rounded-full shadow-lg transition-all"
+              aria-label="Próximo"
             >
-              Próximo
-            </Button>
+              <ChevronRight className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>
