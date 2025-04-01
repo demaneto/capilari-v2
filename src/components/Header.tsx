@@ -40,7 +40,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">
-            {["Tecnologias", "Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
+            {["Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -72,7 +72,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white w-full shadow-lg py-4">
           <ul className="flex flex-col space-y-4 px-6">
-            {["Tecnologias", "Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
+            {["Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}

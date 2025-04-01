@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const Footer = () => {
@@ -21,7 +20,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
-              {["Tecnologias", "Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
+              {["Diferenciais", "Depoimentos", "Sobre", "Contato"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}

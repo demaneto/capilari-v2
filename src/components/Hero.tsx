@@ -64,27 +64,6 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center">
-        <a href="#tecnologias" className="animate-bounce">
-          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="white"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </a>
-      </div>
     </section>
   );
 };
